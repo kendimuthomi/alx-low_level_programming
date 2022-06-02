@@ -1,17 +1,18 @@
 #include<unistd.h>
-/*
- * main is the entry point
+
+/**
+ * main - Entry point
  *
- * Description: printing a quote using thw write function in C
- * write(int fd, const void, size_t count)
+ * Description: print a quote using write function
+ *    write(int fd, const void *buf, count);
  *
- * Return 1(error)
- */
+ * Return: This time we return an error 1.
+*/
 
 int main(void)
 {
-	char quote[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(1, quote, 59);
+	write(1, quo, 59);
 	return (1);
 }
