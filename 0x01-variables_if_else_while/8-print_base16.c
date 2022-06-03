@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - entry point
  *
@@ -9,7 +10,7 @@
 int main(void)
 {
 	char a;
-	char d = 0;
+	char d = '0';
 
 	while (d <= '9')
 	{
