@@ -10,11 +10,11 @@ int main(void)
 {
 	int j, k, l;
 
-	for (j = 0; j <= 9; j++)
+	for (j = '0'; j <= '9'; j++)
 	{
-		for (k = 0; k <= 9; k++)
+		for (k = '0'; k <= '9'; k++)
 		{
-			for (l = 0; l <= 9; l++)
+			for (l = '0'; l <= '9'; l++)
 			{
 				if (j < k && k < l)
 				{
@@ -22,7 +22,7 @@ int main(void)
 					putchar(k);
 					putchar(l);
 
-					if (j != 7)
+					if (j != '7')
 					{
 						putchar(',');
 						putchar(' ');
