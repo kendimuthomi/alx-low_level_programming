@@ -15,10 +15,10 @@ int main(void)
 	while (d <= '9')
 	{
 		putchar(d);
-		++d;
+		d++;
 	}
 
-	for (char a = 'a'; a <= 'f'; a++)
+	for (a = 'a'; a <= 'f'; a++)
 	{
 		putchar(a);
 	}
