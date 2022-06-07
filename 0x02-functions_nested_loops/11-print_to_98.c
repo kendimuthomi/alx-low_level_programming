@@ -8,13 +8,8 @@
 void print_to_98(int n)
 {
 	int c;
-<<<<<<< HEAD
-
-	if (n < 98)
-=======
 	
 	if (n > 98)
->>>>>>> 20c196863062acdd5db9df92cc6b5403bc2347f3
 		for (c = n; c > 98; c--)
 			printf("%d, ", c);
 	else
