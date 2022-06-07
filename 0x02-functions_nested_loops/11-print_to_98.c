@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * print_to_98 - prints from any number to 98
  *
@@ -14,5 +15,5 @@ void print_to_98(int n)
 	else
 		for (c = n; c < 98; c++)
 			printf("%d, ", c);
-	printf("98\n");
+	_putchar('98\n');
 }
