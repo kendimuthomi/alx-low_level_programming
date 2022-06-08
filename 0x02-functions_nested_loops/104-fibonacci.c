@@ -3,7 +3,7 @@
 /**
  * numLength - returns the length of string
  *
- * @num: operand number
+ * @n: operand number
  *
  * Return: number of digits
 */
@@ -37,28 +37,28 @@ int numLength(int n)
 int main(void)
 {
 	int count, initial0s;
-	unsigned long fib1 = 1, fib2 = 2, sum, max = 100000000, fib1o = 0, fib2o = 0, sumo = 0;
+	unsigned long n1 = 1, n2 = 2, sum, max = 100000000, n1o = 0, n2o = 0, sumo = 0;
 
 	for (count = 1; count <= 98; ++count)
 	{
-		if (fib1o > 0)
-			printf("%lu", fib1o);
-		initial0s = numLength(max) - 1 - numLength(fib1);
+		if (n1o > 0)
+			printf("%lu", n1o);
+		initial0s = numLength(max) - 1 - numLength(n1);
 
-		while (fib1o > 0 && initial0s > 0)
+		while (n1o > 0 && initial0s > 0)
 		{
 			printf("%d", 0);
 			--initial0s;
 		}
 
-		printf("%lu", fib1);
+		printf("%lu", n1);
 
-		sum = (fib1 + fib2) % max;
-		sumo = fib1o + fib2o + (fib1 + fib2) / max;
-		fib1 = fib2;
-		fib1o = fib2o;
-		fib2 = sum;
-		fib2o = sumo;
+		sum = (n1 + n2) % max;
+		sumo = n1o + n2o + (n1 + n2) / max;
+		n1 = n2;
+		n1o = n2o;
+		n2 = sum;
+		n2o = sumo;
 
 		if (count != 98)
 			printf(", ");
