@@ -43,7 +43,7 @@ int main(void)
 	{
 		if (fib1o > 0)
 			printf("%lu", fib1o);
-		initial0s = numLength(max) - 1 - numLength(f1);
+		initial0s = numLength(max) - 1 - numLength(fib1);
 
 		while (fib1o > 0 && initial0s > 0)
 		{
