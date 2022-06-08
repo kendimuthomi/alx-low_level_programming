@@ -10,7 +10,7 @@
 int main(void)
 {
 	int c;
-	unsigned long int num1 = 0, num2 = 1, sum;
+       	long int num1 = 0, num2 = 1, sum;
 
 	for (c = 0; c < 50; c++)
 	{
