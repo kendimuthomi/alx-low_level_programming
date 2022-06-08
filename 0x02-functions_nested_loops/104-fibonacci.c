@@ -37,13 +37,13 @@ int numLength(int n)
 int main(void)
 {
 	int count, initial0s;
-	unsigned long n1 = 1, n2 = 2, sum, max = 100000000, n1o = 0, n2o = 0, sumo = 0;
+	unsigned long n1 = 1, n2 = 2, sum, m = 100000000, n1o = 0, n2o = 0, sumo = 0;
 
 	for (count = 1; count <= 98; ++count)
 	{
 		if (n1o > 0)
 			printf("%lu", n1o);
-		initial0s = numLength(max) - 1 - numLength(n1);
+		initial0s = numLength(m) - 1 - numLength(n1);
 
 		while (n1o > 0 && initial0s > 0)
 		{
@@ -53,8 +53,8 @@ int main(void)
 
 		printf("%lu", n1);
 
-		sum = (n1 + n2) % max;
-		sumo = n1o + n2o + (n1 + n2) / max;
+		sum = (n1 + n2) % m;
+		sumo = n1o + n2o + (n1 + n2) / m;
 		n1 = n2;
 		n1o = n2o;
 		n2 = sum;
