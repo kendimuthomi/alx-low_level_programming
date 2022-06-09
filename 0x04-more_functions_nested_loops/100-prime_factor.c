@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned int long num = 612852475143, z = (int) sqrt(n);
+	unsigned int long num = 612852475143, z = (int) sqrt(num);
 
 	while (1)
 	{
