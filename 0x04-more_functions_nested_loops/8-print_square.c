@@ -5,12 +5,19 @@
  */
 void print_square(int size)
 {
-	int r, c;
+	int r = 0, c;
 
-	for (r = 1; r <= size; r++)
+	while (r < n && n > 0)
 	{
-		for (c = 1; c <= size; c++)
+		c = 0;
+		while (c < n)
+		{
 			_putchar('#');
+			c++;
+		}
 		_putchar('\n');
+		r++;
 	}
+	if (r == 0)
+		_putchar('\n');
 }
