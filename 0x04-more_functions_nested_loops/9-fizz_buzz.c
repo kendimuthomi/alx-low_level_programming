@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int d;
+	int d = 1;
 
-	for (d = 1; d <= 100; d++)
+	while (d <= 100)
 	{
 		if (d % 3 == 0)
 		{
@@ -30,10 +30,8 @@ int main(void)
 		{
 			printf(" ");
 		}
-		else
-		{
-			printf("\n");
-		}
+		d++;
 	}
+	printf("\n");
 	return (0);
 }
