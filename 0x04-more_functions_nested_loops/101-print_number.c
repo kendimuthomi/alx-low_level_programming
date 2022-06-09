@@ -5,26 +5,15 @@
  */
 void print_number(int n)
 {
-	int s = 1, m = 0, p = 0;
+	unsigned int p;
 
+	p = n;
 	if (n < 0)
 	{
-		_putchar('-');
-		n = -n;
+		_putchar(45);
+		p = -n;
 	}
-	while (n / s != 0)
-	{
-		s *= 10;
-		m++;
-	}
-	s = s / 10;
-	while (p < m)
-	{
-		_putchar(n / s + '0');
-		n = n - (n / s) * s;
-		s = s / 10;
-		m++;
-	}
-	if (m == 0)
-		_putchar(n + '0');
+	if (p / 10)
+		print_number(p / 10);
+	_putchar((x % 10) + '0');
 }
