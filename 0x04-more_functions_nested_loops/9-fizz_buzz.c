@@ -10,17 +10,17 @@ int main(void)
 
 	while (d <= 100)
 	{
-		if (d % 3 == 0)
+		if (d % 3 == 0 && d % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (d % 3 == 0)
 		{
 			printf("Fizz");
 		}
 		else if (d % 5 == 0)
 		{
 			printf("Buzz");
-		}
-		else if (d % 3 == 0 && d % 5 == 0)
-		{
-			printf("FizzBuzz");
 		}
 		else
 		{
