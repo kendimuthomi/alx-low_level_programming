@@ -12,8 +12,7 @@ int main(void)
 	{
 		if (num % z == 0)
 		{
-			printf("%lu \n", num / z);
-			break;
+			printf("%lu \n", num / z)
 		}
 		z--;
 	}
