@@ -7,10 +7,10 @@ void print_square(int size)
 {
 	int r = 0, c;
 
-	while (r < n && n > 0)
+	while (r < size && size > 0)
 	{
 		c = 0;
-		while (c < n)
+		while (c < size)
 		{
 			_putchar('#');
 			c++;
