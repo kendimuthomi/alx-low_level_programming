@@ -1,21 +1,23 @@
 #include <stdio.h>
-#include <math.h>
 /**
  * main - enrty point
  * Return: 0
  */
 int main(void)
 {
-	unsigned int long num = 612852475143, z = (int) sqrt(num);
+	long n = 612852475143;
+	long d = 2;
+	long l = 0;
 
-	while (1)
+	while (n != 1)
 	{
-		if (num % z == 0)
+		if (n % d == 0)
 		{
-			printf("%lu \n", num / z);
-			break;
+			n = n / d;
+			l = d;
 		}
-		z--;
+		d += 1;
 	}
+	printf("%ld\n", l);
 	return (0);
 }
