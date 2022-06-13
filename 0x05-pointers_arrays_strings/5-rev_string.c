@@ -9,7 +9,6 @@ void rev_string(char *s)
 	char tmp;
 
 	for (length = 0; s[length] != '\0'; length++)
-	{
 		j = 0;
 		lenHalf = length / 2;
 		while (lenHalf--)
@@ -19,5 +18,4 @@ void rev_string(char *s)
 			s[j] = tmp;
 			j++;
 		}
-	}
 }
