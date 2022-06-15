@@ -15,8 +15,11 @@ char *leet(char *s)
 	{
 		for (k = 0; k < 5; k++)
 		{
-			s[j] = str2[k];
-			break;
+			if (s[j] == str1[k] || s[j] == STR1[k])
+			{
+				s[j] = str2[k];
+				break;
+			}
 		}
 	}
 	return (s);
