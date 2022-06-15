@@ -6,7 +6,7 @@
  */
 char *cap_string(char *str)
 {
-	char oct[] = ",\t;\n; .!?\'(){}";
+	char oct[] = ",\t;\n; .!?\"(){}";
 	int j;
 	int k;
 	int l;
