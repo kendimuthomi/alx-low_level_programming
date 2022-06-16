@@ -5,18 +5,14 @@
  */
 void print_number(int n)
 {
-	int div = 1, j, res;
+	unsigned int div = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		div = -div;
 	}
-	for (j = 0; n / div > 9; j++, div *= 10)
-	;
-	for (; div >= 1; n %= div, div /= 10)
-	{
-		res = n / div;
-		_putchar('0' + res);
-	}
+	if ((div / 10) > 0)
+		print_number(div / 10);
+	_putchar((div % 10) + '0');
 }
