@@ -13,7 +13,7 @@ void print_number(int n)
 		n *= -1;
 	}
 	for (j = 0; n / div > 9; j++, div *= 10)
-		;
+	;
 	for (; div >= 1; n %= div, div /= 10)
 	{
 		res = n / div;
