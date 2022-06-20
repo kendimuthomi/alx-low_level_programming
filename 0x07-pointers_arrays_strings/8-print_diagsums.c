@@ -12,7 +12,7 @@ void print_diagsums(int *a, int size)
 	for (j = 0; j < size; j++)
 	{
 		firstSum += a[j];
-		secondSum += a[size - j -1];
+		secondSum += a[size - j - 1];
 		a += size;
 	}
 	printf("%d, ", firstSum);
