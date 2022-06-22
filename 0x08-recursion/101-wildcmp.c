@@ -25,11 +25,11 @@ int check_lastChar(char *s, int j)
  */
 int check(char *str1, char *str2, int k, int l, int usedWild)
 {
-	if (str[k] != '\0')
+	if (str1[k] != '\0')
 	{
 		if (str2[l] == '\0')
 			return (0);
-		else if (str[l] == '*')
+		else if (str2[l] == '*')
 		{
 			if (str2[l + 1] == '*')
 				return (check(str1, str2, k, l + 1, l));
