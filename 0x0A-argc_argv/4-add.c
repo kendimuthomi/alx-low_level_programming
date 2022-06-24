@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 {
 	int sum = 0;
 
-	while (argc--)
+	while (--argc)
 	{
 		if (check_integer(argv[argc]))
 		{
