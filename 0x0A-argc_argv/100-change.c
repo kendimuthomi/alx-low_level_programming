@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <stdbool.h>
 /**
  * isCoin - function that helps to calculate number of coins
  * @j: int
