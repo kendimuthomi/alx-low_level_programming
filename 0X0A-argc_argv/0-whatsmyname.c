@@ -1,14 +1,14 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - entry point
  * @argc: an int
  * @argv: pointer to a list
  * Return: 0(success)
  */
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-	(void)argc;
 
-	printf("%s\n", argv[0]);
+	printf("%s\n", argv[argc * 0]);
 	return (0);
 }
