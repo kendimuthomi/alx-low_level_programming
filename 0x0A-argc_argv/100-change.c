@@ -5,11 +5,11 @@
 /**
  * isCoin - function that helps to calculate number of coins
  * @j: int
- * Return: number of coins neede
+ * Return: number of coins needed
  */
 int isCoin(int j)
 {
-	int c = 0;
+	int count = 0;
 
 	while (j != 0)
 	{
@@ -21,7 +21,7 @@ int isCoin(int j)
 			j -= 10;
 		else if (j % 5 == 0)
 			j -= 5;
-		else if (j % 2 == 0)
+			else if (j % 2 == 0)
 		{
 			if (j % 10 == 6)
 				j -= 1;
@@ -30,15 +30,18 @@ int isCoin(int j)
 		}
 		else
 			j -= 1;
-		c++;
+
+		count++;
 	}
-	return (c);
+
+	return (count);
 }
+
 /**
- * main - entry point
- * @argc: number of arguments
- * @argv: array
- * Return: 0 if 1 argument is passed and 1 if not
+ * main - Takes in exactly one argument for minimum coin count
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 0 if exactly 1 argument is passed into this program, 1 otherwise
  */
 int main(int argc, char *argv[])
 {
@@ -51,14 +54,18 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	j = atoi(argv[1]);
 
 	if (j < 0)
 		printf("0\n");
+
 	else
 	{
 		coin = isCoin(j);
+
 		printf("%d\n", coin);
 	}
+
 	return (0);
 }
