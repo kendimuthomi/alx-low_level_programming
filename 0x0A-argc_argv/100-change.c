@@ -21,13 +21,13 @@ int isCoin(int j)
 			j -= 10;
 		else if (j % 5 == 0)
 			j -= 5;
-			else if (j % 2 == 0)
-			{
-				if (j % 10 == 6)
-					j -= 1;
-				else
-					j -= 2;
-			}
+		else if (j % 2 == 0)
+		{
+			if (j % 10 == 6)
+				j -= 1;
+			else
+				j -= 2;
+		}
 		else
 			j -= 1;
 		c++;
