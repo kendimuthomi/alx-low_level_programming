@@ -2,6 +2,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
+ * strLen - checks the length of a string
+ * @s: string
+ * Return: the size
+ */
+int strLen(char *s)
+{
+	for (size = 0; s[size] != '\0'; size++)
+	;
+	return (size);
+}
+/**
  * str_concat - concatenates two strings
  * @s1: first string
  * @s2: second string
@@ -31,15 +42,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	mem[j] = '\0';
 	return (mem);
-}
-/**
- * strLen - checks the length of a string
- * @s: the string
- * Return: int
- */
-int strLen(char *s)
-{
-	for (size = 0; s[size] != '\0'; size++)
-	;
-	return (size);
 }
