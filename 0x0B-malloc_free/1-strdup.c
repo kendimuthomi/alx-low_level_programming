@@ -28,3 +28,4 @@ char *_strdup(char *str)
 			memory[j] = str[j];
 	}
 	return (memory);
+}
