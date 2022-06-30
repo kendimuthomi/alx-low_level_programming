@@ -97,7 +97,7 @@ int get_digit(char c)
  * Description: If mult contains a non-digit, the function
  *              exits with a status value of 98.
  */
-void get_prod(char *prod, char *mult, int digit, int zeroes)
+void get_prod(char *prod, char *mult, int d, int zeroes)
 {
 	int multLen, num, tens = 0;
 
@@ -221,9 +221,9 @@ int main(int argc, char *argv[])
 	for (i = 0; final_prod[i]; i++)
 	{
 		if (final_prod[i] != 'x')
-			_putchar(final_prod[i]);
+			putchar(final_prod[i]);
 	}
-	_putchar('\n');
+	putchar('\n');
 
 	free(next_prod);
 	free(final_prod);
