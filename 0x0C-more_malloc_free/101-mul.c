@@ -1,73 +1,90 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _puts - prints a string
- * @str: the string to be printed
- */
+ * _puts - prints a string, followed by a new line,
+ * @str: pointer to the string to print
+ * Return: void
+*/
+
+
 void _puts(char *str)
 {
-	int j = 0;
-
-	while (str[j])
+	int i = 0;
+	while (str[i])
 	{
-		_putchar(str[j]);
-		j++;
+		_putchar(str[i]);
+		i++;
 	}
-	_putchar('\n');
-}
-/**
- * _atoi - converts a string to an integer
- * @s: the pointer of the string
- * Return: the integer value of the string
- */
-int _atoi(char *s)
-{
-	int m = 1;
-	unsigned int n = 0;
 
-	do {
-		if (*s == '-')
-			m *= -1;
-		else if (*s >= '0' && *s <= '9')
-			n = (n * 10) + (*s - '0');
-		else if (n > 0)
-			break;
-	} while (*s++);
-	return (n * m);
 }
+
 /**
- * print_int - prints an integer
- * @n: the integer
+ * _atoi - convert a string to an integer.
+ * @s: char type string
+ * Return: integer converted
+ */
+
+int _atoi(const char *s)
+{
+    int sign = 1;
+	unsigned long int resp = 0, firstNum, i;
+
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	{
+		if (s[firstNum] == '-')
+		{
+			sign *= -1;
+		}
+	}
+
+	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
+
+	return (sign * resp);
+}
+
+/**
+ * print_int - prints an integer.
+ * @n: int
  * Return: 0
  */
+
 void print_int(unsigned long int n)
 {
-	unsigned long int divisor = 1, j, ans;
+	unsigned  long int divisor = 1, i, resp;
 
-	for (j = 0; n / divisor > 9; j++, divisor *= 10)
+	for (i = 0; n / divisor > 9; i++, divisor *= 10)
 	;
+
 	for (; divisor >= 1; n %= divisor, divisor /= 10)
 	{
-		ans = n / divisor;
-		_putchar('0' + ans);
+		resp = n / divisor;
+		_putchar('0' + resp);
 	}
+
 }
+
 /**
- * main - multiplies two positive numbers
+ * main - print the result of the multiplication, followed by a new line
  * @argc: int
- * @argv: array
+ * @argv: list
  * Return: 0
  */
+
 int main(int argc, char const *argv[])
 {
 	(void)argc;
 
 	if (argc != 3)
 	{
-		_puts("Error");
+		_puts("Error ");
 		exit(98);
 	}
 	print_int(_atoi(argv[1]) * _atoi(argv[2]));
 	_putchar('\n');
+
 	return (0);
 }
