@@ -7,15 +7,14 @@
  * @n: number of bytes to copy
  * Return: pointer to the destination buffer
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(char *dest, char *src, size_t n)
 {
-	unsigned int j;
-	char *destination = dest;
-	const char *source = src;
+	size_t j;
+	char *destination = (char *)dest;
+	const char *source = (char *)src;
 
 	for (j = 0; j < n; j++)
 		destination[j] = source[j];
-	return (dest);
 }
 /**
  * _realloc - reallocates a memory block
