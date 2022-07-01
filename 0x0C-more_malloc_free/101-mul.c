@@ -2,30 +2,30 @@
 #include "main.h"
 #include <stdio.h>
 
-int find_len(char *str);
-char *create_xarray(int size);
+int str_len(char *str);
+char *create_array(int size);
 char *iterate_zeroes(char *str);
 void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
- * find_len - Finds the length of a string.
+ * str_len - Finds the length of a string.
  * @str: The string to be measured.
  *
  * Return: The length of the string.
  */
-int find_len(char *str)
+int str_len(char *str)
 {
-	int len = 0;
+	int length = 0;
 
 	while (*str++)
-		len++;
+		length++;
 
-	return (len);
+	return (length);
 }
 
 /**
- * create_xarray - Creates an array of chars and initializes it with
+ * create_array - Creates an array of chars and initializes it with
  *                 the character 'x'. Adds a terminating null byte.
  * @size: The size of the array to be initialized.
  *
@@ -33,22 +33,22 @@ int find_len(char *str)
  *              function exits with a status of 98.
  * Return: A pointer to the array.
  */
-char *create_xarray(int size)
+char *create_array(int size)
 {
-	char *array;
-	int index;
+	char *arr;
+	int i;
 
-	array = malloc(sizeof(char) * size);
+	arr = malloc(sizeof(char) * size);
 
-	if (array == NULL)
+	if (arr == NULL)
 		exit(98);
 
-	for (index = 0; index < (size - 1); index++)
-		array[index] = 'x';
+	for (i = 0; i < (size - 1); i++)
+		arr[i] = 'x';
 
-	array[index] = '\0';
+	arr[i] = '\0';
 
-	return (array);
+	return (arr);
 }
 
 /**
@@ -101,7 +101,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 {
 	int mult_len, num, tens = 0;
 
-	mult_len = find_len(mult) - 1;
+	mult_len = str_len(mult) - 1;
 	mult += mult_len;
 
 	while (*prod)
@@ -190,7 +190,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 int main(int argc, char *argv[])
 {
 	char *final_prod, *next_prod;
-	int size, index, digit, zeroes = 0;
+	int size, i, digit, zeroes = 0;
 
 	if (argc != 3)
 	{
@@ -208,20 +208,20 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	size = find_len(argv[1]) + find_len(argv[2]);
-	final_prod = create_xarray(size + 1);
-	next_prod = create_xarray(size + 1);
+	size = str_len(argv[1]) + str_len(argv[2]);
+	final_prod = create_array(size + 1);
+	next_prod = create_array(size + 1);
 
-	for (index = find_len(argv[2]) - 1; index >= 0; index--)
+	for (i = str_len(argv[2]) - 1; i >= 0; i--)
 	{
-		digit = get_digit(*(argv[2] + index));
+		digit = get_digit(*(argv[2] + i));
 		get_prod(next_prod, argv[1], digit, zeroes++);
 		add_nums(final_prod, next_prod, size - 1);
 	}
-	for (index = 0; final_prod[index]; index++)
+	for (i = 0; final_prod[i]; i++)
 	{
-		if (final_prod[index] != 'x')
-			putchar(final_prod[index]);
+		if (final_prod[i] != 'x')
+			putchar(final_prod[i]);
 	}
 	putchar('\n');
 
