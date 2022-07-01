@@ -27,7 +27,7 @@ void _puts(char *str)
 int _atoi(const char *s)
 {
     int sign = 1;
-	unsigned long int resp = 0, firstNum, i;
+    unsigned long int resp = 0, firstNum, i;
 
 	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
 	{
@@ -80,7 +80,7 @@ int main(int argc, char const *argv[])
 
 	if (argc != 3)
 	{
-		_puts("Error ");
+		_puts("Error\n");
 		exit(98);
 	}
 	print_int(_atoi(argv[1]) * _atoi(argv[2]));
