@@ -5,7 +5,7 @@
 int strLen(char *str);
 char *createArray(int size);
 char *iterate_zeroes(char *str);
-void get_prod(char *prod, char *mult, int digit, int zeroes);
+void get_prod(char *prod, char *mult, int d, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
@@ -91,7 +91,7 @@ int get_digit(char c)
  * get_prod - Multiplies a string of numbers by a single digit.
  * @prod: The buffer to store the result.
  * @mult: The string of numbers.
- * @digit: The single digit.
+ * @d: The single digit.
  * @zeroes: The necessary number of leading zeroes.
  *
  * Description: If mult contains a non-digit, the function
