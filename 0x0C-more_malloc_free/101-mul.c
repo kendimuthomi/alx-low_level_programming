@@ -38,7 +38,7 @@ char *createArray(int size)
 	char *arr;
 	int i;
 
-	array = malloc(sizeof(char) * size);
+	arr = malloc(sizeof(char) * size);
 
 	if (arr == NULL)
 		exit(98);
