@@ -19,9 +19,9 @@ int strLen(char *str)
 	int length = 0;
 
 	while (*str++)
-		len++;
+		length++;
 
-	return (len);
+	return (length);
 }
 
 /**
