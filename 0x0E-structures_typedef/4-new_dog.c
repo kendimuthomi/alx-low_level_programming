@@ -46,6 +46,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t newDog;
 	unsigned int nameLen, ownerLen;
 
+	if (name == NULL || age < 0 || owner == NULL)
+		return (NULL);
 	newDog = malloc(sizeof(dog_t));
 	if (newDog == NULL)
 		return (NULL);
