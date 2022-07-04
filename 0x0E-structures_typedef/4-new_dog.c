@@ -43,7 +43,7 @@ char *strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t newDog;
+	dog_t *newDog;
 	unsigned int nameLen, ownerLen;
 
 	if (name == NULL || age < 0 || owner == NULL)
