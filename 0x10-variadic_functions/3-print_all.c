@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * print_int - prints integers
  * @args: arguments
@@ -61,19 +62,16 @@ void print_all(const char * const format, ...)
 	};
 	va_start(args, format);
 
-	while (format && format[i])
+	while (format && (*(format + i)))
 	{
 		j = 0;
-		while (j < 4)
-		{
-			if (*printType[j].type == format[i])
-			{
-				printf("%s", separator);
-				printType[j].printer(args);
-				separator = ", ";
-				break;
-			}
+		while (j < 4 && (*(format + i) != *(printType[j].type)))
 			j++;
+		if (j < 4)
+		{
+			printf("%s", separator);
+			printType[j].printer(args);
+			separator = ", ";
 		}
 		i++;
 	}
