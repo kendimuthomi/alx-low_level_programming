@@ -54,11 +54,10 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 
 	printTypeStruct printType[] = {
-		{"d", print_int},
+		{"i", print_int},
 		{"f", print_float},
 		{"c", print_char},
-		{"s", print_string},
-		{NULL, NULL}
+		{"s", print_string}
 	};
 	va_start(args, format);
 
