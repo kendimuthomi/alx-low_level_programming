@@ -7,7 +7,7 @@
  * @r_index: buffer index
  * Return: pointer to the result
  */
-char *string_add(char *n1, char *n2, char *r, char *r_index)
+char *string_add(char *n1, char *n2, char *r, int r_index)
 {
 	int num, tens = 0;
 
