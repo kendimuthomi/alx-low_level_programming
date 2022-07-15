@@ -19,7 +19,7 @@ void print_buffer(char *b, int size)
 			else
 				printf("%02x", *(b + i + byte));
 			if ((i % 2) != 0 && i != 0)
-				print(' ');
+				printf(" ");
 		}
 		for (i = 0; i < 10; i++)
 		{
