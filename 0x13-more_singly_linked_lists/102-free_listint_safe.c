@@ -7,7 +7,7 @@
  */
 size_t listint_count(const listint_t *head)
 {
-	const listint_t *node1, node2;
+	const listint_t *node1, *node2;
 	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
