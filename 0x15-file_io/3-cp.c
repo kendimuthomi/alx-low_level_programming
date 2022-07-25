@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	fptr_r = open(argv[1], O_RDONLY);
 	if (fptr_r < 0)
 	{
-		dprintf(STDERR_FILENO, "Error cannot read from file\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fptr_w = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
