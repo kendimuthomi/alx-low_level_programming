@@ -1,7 +1,6 @@
 #include<unistd.h>
 /**
  * main - Entry point
->>>>>>> 89870068321d919f840a88b263295dc4cf441dba
  *
  * Description: print a quote using write function
  *    write(int fd, const void *buf, count);
