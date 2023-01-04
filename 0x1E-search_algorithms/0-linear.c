@@ -3,11 +3,17 @@
  * linear_search - using linear search algorithm
  * Description: function that searches for a value
  *  in an array of integers using the Linear search algorithm
+ *  @array: pointer to the first element of the array to search in
+ *  @size: number of elements in array
+ *  @value: value to search for
  *  Return: value or -1 if value not present
  */
 int linear_search(int *array, size_t size, int value)
 {
 	size_t i;
+
+	if (array == NULL)
+		return (-1);
 
 	for (i = 0; i < size; i++)
 	{
